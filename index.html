@@ -1,44 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Styled Website</title>
-
-    <!-- Link CSS -->
+    <title>Photo Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>My Website</h1>
-    </header>
+<div id="image">
+    Hover over an image below to display here.
+</div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
+<img
+src="https://tse1.mm.bing.net/th/id/OIP.NUnwf_CNKoTvatXrbyTmrwHaEG?pid=Api"
+alt="Beautiful Mountain"
+onmouseover="upDate(this)"
+onmouseleave="unDo()"
+/>
 
-    <main>
-        <h2>Welcome</h2>
+<img
+src="https://khoinguonsangtao.vn/wp-content/uploads/2021/12/hinh-nen-may-tinh.jpg"
+alt="Blue Ocean"
+onmouseover="upDate(this)"
+onmouseleave="unDo()"
+/>
 
-        <p>
-            This is my styled website for the CSS assignment.
-            I used CSS to change colors, fonts, spacing, and layout.
-        </p>
+<script>
 
-        <p>
-            The website uses one stylesheet for all pages.
-        </p>
-    </main>
+function upDate(previewPic){
 
-    <footer>
-        <p>Copyright 2026</p>
-    </footer>
+    document.getElementById("image").innerHTML = previewPic.alt;
+
+    document.getElementById("image").style.backgroundImage =
+    "url('" + previewPic.src + "')";
+}
+
+function unDo(){
+
+    document.getElementById("image").style.backgroundImage =
+    "url('')";
+
+    document.getElementById("image").innerHTML =
+    "Hover over an image below to display here.";
+}
+
+</script>
 
 </body>
 </html>
