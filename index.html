@@ -1,50 +1,54 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Photo Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="image">
-    Hover over an image below to display here.
-</div>
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
 
-<img
-src="https://tse1.mm.bing.net/th/id/OIP.NUnwf_CNKoTvatXrbyTmrwHaEG?pid=Api"
-alt="Beautiful Mountain"
-onmouseover="upDate(this)"
-onmouseleave="unDo()"
-/>
+    <header>
+        <h1>Nature Website</h1>
 
-<img
-src="https://khoinguonsangtao.vn/wp-content/uploads/2021/12/hinh-nen-may-tinh.jpg"
-alt="Blue Ocean"
-onmouseover="upDate(this)"
-onmouseleave="unDo()"
-/>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="parks.html">Parks</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<script>
+    <main id="main-content">
 
-function upDate(previewPic){
+        <h2>Welcome</h2>
 
-    document.getElementById("image").innerHTML = previewPic.alt;
+        <p>
+            Explore beautiful nature landscapes from around the world.
+        </p>
 
-    document.getElementById("image").style.backgroundImage =
-    "url('" + previewPic.src + "')";
-}
+        <section class="grid">
 
-function unDo(){
+            <img src="images/nature1.jpg" alt="Mountain view">
 
-    document.getElementById("image").style.backgroundImage =
-    "url('')";
+            <img src="images/nature2.jpg" alt="Forest view">
 
-    document.getElementById("image").innerHTML =
-    "Hover over an image below to display here.";
-}
+            <img src="images/nature3.jpg" alt="Ocean view">
 
-</script>
+            <img src="images/nature4.jpg" alt="Lake view">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Nature Website</p>
+    </footer>
 
 </body>
 </html>
